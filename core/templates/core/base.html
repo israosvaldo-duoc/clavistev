@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Contacto</title>
+    <title>Home | ClavisteV</title>
     <script src="https://kit.fontawesome.com/a0769e5497.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -51,10 +51,9 @@
 
     <div class="container">
 
-
-
-
-
+        {% block contenido %}
+            
+        {% endblock %}
 
     </div>
     
@@ -75,7 +74,7 @@
                     <ul class="footer-links d-flex justify-content-between" id="logos-redes">
                         <li><a href="https://www.facebook.com/ClavisteV-100393962191865" target="_blank"><i
                                     class="fab fa-facebook"></i></a></li>
-                        <li><a href=" https://twitter.com/clavistev" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <li><a href=" https://twitter.com/clavistev" target="_blank"><i class="fab fa-twitter"></i></a>
                         </li>
                         <li><a href="https://www.instagram.com/clavistev/" target="_blank"><i
                                     class="fab fa-instagram"></i></a></li>
@@ -94,8 +93,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <script src="../js/formulario.js"></script>
-    <script src="../js/validarRut.js"></script>
-    <script src="../js/api.js"></script>
+    <script src="{% static 'core/'%}js/formulario.js"></script>
+    <script src="{% static 'core/'%}js/validarRut.js"></script>
+    <script src="{% static 'core/'%}js/api.js"></script>
 </body>
 </html>
