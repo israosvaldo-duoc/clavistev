@@ -7,3 +7,6 @@ def home(request):
 
 def crear_celular(request):
     return render(request, 'core/crear_celular.html')
+
+def listado_celulares(request):
+    return render(request, 'core/listado_celulares.html')
