@@ -1,8 +1,31 @@
 <!-- HERENCIA DESDE base.html-->
 {% extends 'core/base.html' %}
 
+<!-- BLOQUE CONTENIDO -->
 {% block contenido %}
 
 <h1>Listado Celulares</h1>
+
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Compañía</th>
+      </tr>
+    </thead>
+    <!-- RECORRIDO LISTADO CELULARES-->
+    {% for cel in celulares %} 
+    <tbody> 
+      <tr>
+        <th scope="row">{{ cel.idCelular}}</th>
+        <td>{{ cel.marca }}</td>
+        <td>{{ cel.modelo }}</td>
+        <td>{{ cel.compania }}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
 
 {% endblock %}
