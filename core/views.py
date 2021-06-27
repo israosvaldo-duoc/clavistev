@@ -1,5 +1,5 @@
 from core.models import Celular
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Celular
 from .forms import CelularForm
 
@@ -36,7 +36,9 @@ def crear_celular(request):
 def editar_celulares(request):
     return render(request, 'core/editar_celulares.html')
 
-def eliminar_celulares(request):
-    return render(request, 'core/eliminar_celulares.html') 
+def eliminar_celulares(request,pk):
+    celular = Celular.objects.get(idCelular=pk)
+    celular.delete()
+    return redirect(to="listado_celulares") 
 
 
