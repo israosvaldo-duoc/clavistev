@@ -33,8 +33,18 @@ def crear_celular(request):
     return render(request, 'core/crear_celular.html', data)
 
 
-def editar_celulares(request):
-    return render(request, 'core/editar_celulares.html')
+def editar_celulares(request, id):
+    celular = Celular.objects.get(idCelular=id)
+    data = {
+        'form': CelularForm(instance=celular)
+    }
+    if request.method =='POST':
+        formulario_edit = CelularForm(data=request.POST, instance=celular)
+        if formulario_edit.is_valid:
+            formulario_edit.save()
+            data['mensaje'] = "Celular modificado correctamente"
+    
+    return render(request, 'core/editar_celulares.html', data)
 
 def eliminar_celulares(request):
     return render(request, 'core/eliminar_celulares.html') 
