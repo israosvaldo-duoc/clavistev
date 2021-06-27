@@ -18,4 +18,4 @@ class Celular (models.Model):
 
 
     def __str__(self):
-        return self.marca
+        return self.modelo
