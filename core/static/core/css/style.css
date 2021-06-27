@@ -11,11 +11,11 @@ h2{
 }
 
 #menu-opciones{
-    margin-left: 300px;
+    margin-left: 150px;
 }
 
 #nav-inicio{
-    margin-left: 30px;
+    margin-right: 0px;
     font-size: 18px;
 }
 
@@ -45,7 +45,10 @@ footer {
     width: 100%;
     height: 200px;
     text-decoration: none;
-    margin-top: 20px;
+    /*padding-bottom:200px;*/
+    bottom: 0;
+
+
 }
 
 #clima{
@@ -56,7 +59,7 @@ footer {
 }
 
 #location{
-    margin-left: 380px;
+    margin-left: 280px;
 }
 .left {
     text-align: left;
@@ -118,4 +121,23 @@ footer {
 .footer-links>li {
     display: inline-block;
     margin: 5px;
+}
+
+#mensaje-success{
+    color: #186e6e;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#formulario{
+    display: block;
+    margin-top: 40px;
+}
+
+#div-enviar-limpiar{
+    margin-top: 60px;
+}
+
+#limpiar{
+    margin-left: 10px;
 }

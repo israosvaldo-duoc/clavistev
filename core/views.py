@@ -18,8 +18,20 @@ def listado_celulares(request):
     # Traspasamos data como tercer parámetro al momento de randerizar 
     return render(request, 'core/listado_celulares.html', data)
 
+
 def crear_celular(request):
-    return render(request, 'core/crear_celular.html')
+    data = {
+        'form': CelularForm()
+    }
+
+    if request.method == 'POST':
+        formulario = CelularForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            data['mensaje'] = "Celular agregado correctamente"
+
+    return render(request, 'core/crear_celular.html', data)
+
 
 def editar_celulares(request):
     return render(request, 'core/editar_celulares.html')
