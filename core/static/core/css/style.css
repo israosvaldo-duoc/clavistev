@@ -129,15 +129,33 @@ footer {
     margin-top: 20px;
 }
 
+#titulo-agregar-celular{
+    color: #154949;
+    margin-top: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #formulario{
     display: block;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 200px;
 }
 
 #div-enviar-limpiar{
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 #limpiar{
     margin-left: 10px;
+}
+
+#titulo-listado-celulares{
+    color: #154949;
+    margin-top: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 30px;
+}
+
+#container{
+    margin-bottom: 100px;
 }
