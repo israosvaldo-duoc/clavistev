@@ -11,6 +11,9 @@ def listado_celulares(request):
 def crear_celular(request):
     return render(request, 'core/crear_celular.html')
 
+def editar_celulares(request):
+    return render(request, 'core/editar_celulares.html')
+
 def eliminar_celulares(request):
     return render(request, 'core/eliminar_celulares.html') 
 
