@@ -1,6 +1,7 @@
 from core.models import Celular
 from django.shortcuts import render
 from .models import Celular
+from .forms import CelularForm
 
 # Create your views here.
 
