@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'core/home.html')
+
+def eliminar_celulares(request):
+    return render(request, 'core/eliminar_celulares.html')    
