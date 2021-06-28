@@ -8,6 +8,7 @@ from .forms import CelularForm
 def home(request):
     return render(request, 'core/home.html')
 
+
 def listado_celulares(request):
     # Creamos una variable que traiga el listado de celulares desde la BD
     celulares = Celular.objects.all()
@@ -45,6 +46,7 @@ def editar_celulares(request, id):
             data['mensaje'] = "Celular modificado correctamente"
     
     return render(request, 'core/editar_celulares.html', data)
+
 
 def eliminar_celulares(request,pk):
     celular = Celular.objects.get(idCelular=pk)

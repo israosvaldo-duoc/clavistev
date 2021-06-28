@@ -25,8 +25,11 @@ integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2
 
     <div id="div-enviar-limpiar">
         <input class="btn btn-primary" type="submit" value="Enviar" id="enviar">
-        <input class="btn btn-secondary" type="reset" value="Limpiar" id="limpiar">
+        <input class="btn btn-secondary" type="reset" value="Limpiar" id="btnLimpiar">
     </div>
+    <br>
+    <a id="volver-listado" href="{% url 'listado_celulares' %}" class="btn btn-info">Volver a Listado Celulares</a>
+
 </form>
 
 <div id="mensaje" class="" role="alert"> <p id="mensaje-success"> {{ mensaje }} </p></div>

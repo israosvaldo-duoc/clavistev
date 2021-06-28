@@ -16,6 +16,5 @@ class Celular (models.Model):
     modelo     = models.CharField(max_length=30, verbose_name="Modelo Celular")
     compania   = models.ForeignKey(Compania, on_delete=models.CASCADE)
 
-
     def __str__(self):
         return self.modelo

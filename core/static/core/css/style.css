@@ -159,3 +159,9 @@ footer {
 #container{
     margin-bottom: 100px;
 }
+
+#titulo-modificar-celular{
+    color: #154949;
+    margin-top: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+} 

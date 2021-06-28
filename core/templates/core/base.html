@@ -28,18 +28,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav" id="menu-opciones">
-                <a class="nav-link active" href="#" id="nav-inicio">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="{% url 'home' %}" id="nav-inicio">Inicio <span class="sr-only">(current)</span></a>
                 <a class="nav-link" href="#" id="nav-formulario" >Planes Hogar</a>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="nav-mantenedor" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                       Mantenedor
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                      <li><a class="dropdown-item" href="#">Listado Celulares</a></li>
-                      <li><a class="dropdown-item" href="#">Agregar celular</a></li>
-                      <li><a class="dropdown-item" href="#">Modificar celular</a></li>
+                      <li><a class="dropdown-item" href="{% url 'listado_celulares' %}">Listado Celulares</a></li>
+                      <li><a class="dropdown-item" href="{% url 'crear_celular' %}">Agregar celular</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                   </li>
                 <a class="nav-link" id="nav-contacto" href="#">Contacto</a>
@@ -85,9 +83,6 @@
     
                     </ul>
                 </div>
-    
-    
-    
             </div>
         </div>
     </footer>
@@ -100,6 +95,7 @@
     <script src="{% static 'core/'%}js/formulario.js"></script>
     <script src="{% static 'core/'%}js/validarRut.js"></script>
     <script src="{% static 'core/'%}js/api.js"></script>
+    <script src="{% static 'core/'%}js/fx.js"></script>
 
     <!-- BlOQUE JAVASCRIPT-->
     {% block javascript %}
