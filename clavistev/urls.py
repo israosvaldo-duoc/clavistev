@@ -20,6 +20,7 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('api/', include('rest_api.urls'))
 ]
 
 admin.site.site_header = "Administración Clavistev"
