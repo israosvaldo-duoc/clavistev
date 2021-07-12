@@ -4,11 +4,14 @@ from core.models import Celular
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from rest_framework import serializers, status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
 # Crud API (Completa) parte 1.
 @api_view(['GET','POST'])
+@permission_classes((IsAuthenticated,))
 def celular_1(request):
     # Permite listar todos los celulares
     if request.method == 'GET':
@@ -27,6 +30,7 @@ def celular_1(request):
 
 # Crud API (Completa) parte 2.
 @api_view(['GET','PUT','DELETE'])
+@permission_classes((IsAuthenticated,))
 def celular_2(request, pk):
         # Instanciar el elemento singular desde la bd
         try:
